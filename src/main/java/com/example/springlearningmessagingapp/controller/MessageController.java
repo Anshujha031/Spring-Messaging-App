@@ -28,6 +28,13 @@ public class MessageController {
         public String deleteHello(@PathVariable String name) {
             return "Goodbye, " + name + " from BridgeLabz!";
         }
+
+        //Get Method -  respond with "Hello {name} from BridgeLabz" using query param
+    @GetMapping("/query")
+    public String sayHello(@RequestParam String name) {
+            return "Hello " + name + " from BridgeLabz";
+    }
+
     }
 
 
