@@ -35,6 +35,12 @@ public class MessageController {
             return "Hello " + name + " from BridgeLabz";
     }
 
+    //Get method - reponds with "Hello {name} from BridgeLabz" using path variable
+    @GetMapping("/param/{name}")
+    public String sayHelloUsingPath(@PathVariable String name){
+            return "Hello " + name + " from BridgeLabz";
+    }
+
     }
 
 
