@@ -1,4 +1,5 @@
 package com.example.springlearningmessagingapp.controller;
+import com.example.springlearningmessagingapp.dto.UserDTO;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -39,6 +40,11 @@ public class MessageController {
     @GetMapping("/param/{name}")
     public String sayHelloUsingPath(@PathVariable String name){
             return "Hello " + name + " from BridgeLabz";
+    }
+
+    @PostMapping("/post")
+    public String say(@RequestBody UserDTO user){
+            return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz ";
     }
 
     }
